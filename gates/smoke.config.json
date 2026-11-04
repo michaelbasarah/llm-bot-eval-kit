@@ -1,0 +1,11 @@
+{
+  "widths": [1280, 384],
+  "routes": ["/", "/transcripts", "/health"],
+  "login": null,
+  "requiredHeaders": {
+    "x-content-type-options": "^nosniff$",
+    "x-frame-options": "^deny$",
+    "content-security-policy": "frame-ancestors",
+    "referrer-policy": "strict-origin-when-cross-origin"
+  }
+}

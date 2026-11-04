@@ -1,0 +1,28 @@
+{
+  "fallbackMarker": "sistem kami sedang sibuk",
+  "scripts": [
+    {
+      "name": "greeting",
+      "turns": [{ "text": "Halo, saya mau tanya nih", "anyMatch": ["halo", "hai", "selamat", "bantu"], "lang": "id" }]
+    },
+    {
+      "name": "faq-hours",
+      "turns": [{ "text": "Jam buka kapan ya?", "anyMatch": ["jam", "buka", "tutup", "senin", "minggu", ":"], "lang": "id" }]
+    },
+    {
+      "name": "faq-hours-english",
+      "turns": [{ "text": "Hi, what are your opening hours?", "anyMatch": ["open", "hours", "closed", "monday", ":"], "lang": "en" }]
+    },
+    {
+      "name": "booking-happy-path",
+      "turns": [
+        { "text": "Saya mau booking potong rambut", "anyMatch": ["tanggal", "jam", "kapan", "booking"] },
+        { "text": "Besok jam 10 pagi ya", "anyMatch": ["jam 10", "10:00", "catat", "cek", "booking"] }
+      ]
+    },
+    {
+      "name": "cancel",
+      "turns": [{ "text": "Mohon bantuannya, saya mau membatalkan booking saya", "anyMatch": ["batal", "cancel", "baik", "cek", "bantu"] }]
+    }
+  ]
+}

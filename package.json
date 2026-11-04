@@ -1,0 +1,20 @@
+{
+  "name": "llm-bot-eval-kit",
+  "version": "0.1.0",
+  "description": "Regression-test an LLM chatbot like code: persona scenarios, prompt-injection probes, a golden-conversation gate, a browser smoke gate and a clock-shift CI guard.",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20.12" },
+  "scripts": {
+    "start": "node bot/server.mjs",
+    "eval": "node eval/eval.mjs",
+    "golden": "node gates/golden.mjs",
+    "smoke": "node gates/smoke.mjs",
+    "test": "for f in $(find test -name '_*test.mjs' | sort); do echo \"== $f ==\"; node \"$f\" || exit 1; done",
+    "test:future": "for f in $(find test -name '_*test.mjs' | sort); do echo \"== $f (clock +183d) ==\"; node gates/clock-shift.mjs 183 \"$f\" || exit 1; done"
+  },
+  "devDependencies": {
+    "playwright-core": "1.62.0"
+  }
+}
